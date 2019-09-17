@@ -1,27 +1,15 @@
 # Soccer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+This my byteworks interview assessment project for fornt end developer
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Soccer is a web application built in angular that consumes web APIs to provide information about soccer competitions, players and teams.
+- the project took me days to start and complete, because i saw the Task email very late
+- The most difficulty i faced was getting the player's thumbnail, because the api given does not provide any, so i had to use the wikipedia api to query the player's page and grab their thubmnail from there
+-The functionality i'm most proud of is the pagination i implemented in the squad list page, because i didn't utilize any libraries just raw code! and i'm also proud of the theming of the entire project 
 
-## Code scaffolding
+## Liberies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Bootstrap was used for as my css framework, because it is responsive right out of the box and has alot of built in style classes
+-jQuery was used to suppport the bootstrap framework, as it is required
