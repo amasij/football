@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Team</th>
+      <th scope="col">Goals</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let scorer of scorers;index as i">
+      <th scope="row">{{i+1}}</th>
+      <td><a href="player/{{scorer.player.id}}">{{scorer.player.name}}</a></td>
+      <td>{{scorer.team.name}}</td>
+      <td>{{scorer.numberOfGoals}}</td>
+    </tr>
+    
+  </tbody>
+</table>
+		</div>
+	</div>
+</div>

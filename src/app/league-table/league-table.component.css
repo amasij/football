@@ -1,0 +1,7 @@
+.btn-active{
+	color:white;
+	border-bottom: 3px solid #00bc8c;
+}
+.btn:focus, .btn.focus{
+	box-shadow: unset;
+}

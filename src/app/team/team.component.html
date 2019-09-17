@@ -1,0 +1,95 @@
+ 
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-4">
+
+      <div class="card" style="width: 18rem;">
+
+        <img src="{{teamDetails.crestUrl}}" class="card-img-top " width="200%" height="200%">
+
+        <div class="card-body">
+
+          <h5 class="card-title">{{teamDetails.shortName}}</h5>
+
+          <p class="card-text">{{teamDetails.name}}</p>
+
+        </div>
+
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item">Founded: {{teamDetails.founded}}</li>
+
+          <li class="list-group-item">Venue: {{teamDetails.venue}}</li>
+
+          <li class="list-group-item">Address: {{teamDetails.address}}</li>
+
+        </ul>
+
+        <div class="card-body"></div>
+
+      </div>
+
+    </div>
+
+    <div class="col-sm-8">
+
+      <h2>Full Squad List</h2>
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <table class="table table-borderless">
+
+            <thead>
+
+              <tr>
+
+              <th scope="col">#</th>
+
+              <th scope="col">Name</th>
+
+              <th scope="col">Position</th>
+
+              <th scope="col">Nationality</th>
+
+              <th scope="col">Age</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr *ngFor="let player of teamDetails.squad | slice:currentPage:countLimit;index as i">
+
+              <th scope="row">{{(i+1)+currentPage}}</th>
+
+              <td><a routerLink="/player/{{player.id}}">{{player.name}}</a></td>
+
+              <td>{{player.position}}</td>
+
+              <td>{{player.nationality}}</td>
+
+              <td>
+
+              {{currentYear-player.dateOfBirth.split('-')[0]}}</td>
+
+              </tr>
+
+            </tbody>
+            
+          </table>
+
+          <button (click)="previousPage()" class="btn btn-success">Previous</button>
+
+          <button (click)="nextPage()" class="btn btn-success" style="margin-left: 20px;">Next</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+
+	<div class="row" *ngFor="let fixture of fixtures | slice:0:10;index as i">
+
+		<div class="col-sm-3">
+
+			<a href="teams/{{fixture.awayTeam.id}}">{{fixture.awayTeam.name}}</a>
+			<br>
+			Match Day: {{fixture.matchday}}
+
+		</div>
+
+		<div class="col-sm-2"></div>
+
+		<div class="col-sm-2">V</div>
+
+		<div class="col-sm-2"></div>
+
+		<div class="col-sm-3">
+
+			<a href="teams/{{fixture.homeTeam.id}}">
+			{{fixture.homeTeam.name}}
+			</a>
+
+		</div>
+
+	</div>
+	
+</div>

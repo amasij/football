@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col">MP</th>
+      <th scope="col">W</th>
+      <th scope="col">D</th>
+      <th scope="col">L</th>
+      <th scope="col">GF</th>
+      <th scope="col">GA</th>
+      <th scope="col">GD</th>
+      <th scope="col">Pts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stand of standings;index as i">
+      <th scope="row">{{i+1}}</th>
+      <td><img src="{{stand.team.crestUrl}}" width="30px" height="30px"></td>
+      <td><a routerLink="/teams/{{stand.team.id}}">{{stand.team.name}}</a></td>
+      <td>{{stand.playedGames}}</td>
+      <td>{{stand.won}}</td>
+      <td>{{stand.draw}}</td>
+      <td>{{stand.lost}}</td>
+      <td>{{stand.goalsFor}}</td>
+      <td>{{stand.goalsAgainst}}</td>
+      <td>{{stand.goalDifference}}</td>
+      <td>{{stand.points}}</td>
+    </tr>
+ 
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</div>

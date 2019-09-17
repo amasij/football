@@ -1,0 +1,23 @@
+<app-banner [bannerName]="bannerName"></app-banner>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-12">
+
+      <button class="btn" (click)="showTable(leagueId)" [class.btn-active]="showingTable">Table</button>
+
+      <button class="btn" (click)="showFixtures(leagueId)" [class.btn-active]="showingFixture">Fixtures</button>
+
+      <button class="btn" (click)="showScorers(leagueId)" [class.btn-active]="showingScorer">Top Scorers</button>
+
+    </div>
+
+  </div>
+  
+</div>
+
+<hr>
+
+<router-outlet></router-outlet>
