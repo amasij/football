@@ -1,6 +1,6 @@
 # Soccer
 
-This my byteworks interview assessment project for fornt end developer
+This my byteworks interview assessment project for the Front-End Developer role
 
 ## Description
 
