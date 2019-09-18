@@ -18,17 +18,24 @@ export class TeamComponent implements OnInit {
   public countLimit=this.itemsPerPage;
 
   ngOnInit() {
+
+    //get the current year, which is used to calculate the player's age
     this.currentYear=parseInt(this.currentYear.toString());
 
+    //grab the team id from the url
     this.route.paramMap.subscribe((params:ParamMap)=>{
 
     let teamId=parseInt(params.get('teamId'))
 
+    //fetch data about the team
     this._leagueTableService.getTeam(teamId)
     .subscribe(data=> this.teamDetails=data);
 
     })
   }
+
+
+  //This method id used for pagination control, when the next button is clicked
 
   nextPage(){
     let squadLength=this.teamDetails.squad.length;
@@ -44,6 +51,7 @@ export class TeamComponent implements OnInit {
    
   }
 
+  //This method id used for pagination control, when the previous button is clicked
   previousPage(){
 
     this.currentPage-=this.itemsPerPage;

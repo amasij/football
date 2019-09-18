@@ -13,15 +13,17 @@ export class ScorersComponent implements OnInit {
 
 public scorers;
   ngOnInit() {
+    //fetch the league id from the url
   	 this.route.paramMap.subscribe((params:ParamMap)=>{
+
       let leagueId=parseInt(params.get('leagueId'))
 
+      //get the list of top scorers
       this._leagueTableService.getScorers(leagueId)
     .subscribe(data=>{
      
       this.scorers=data["scorers"];
-       console.log(this.scorers)
-      //console.log(data["standings"][0])
+       
     });
     
     })

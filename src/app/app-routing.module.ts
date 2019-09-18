@@ -8,9 +8,11 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { ScorersComponent } from './scorers/scorers.component';
 import { TablesComponent } from './tables/tables.component';
 
+let deafaultLeagueId=2021;// the default league on app launch (premeir league)
+
 const routes: Routes = [
 
-{path:'',redirectTo:'/league/2021',pathMatch:'full'},
+{path:'',redirectTo:`/league/${deafaultLeagueId}`,pathMatch:'full'},//redirect to premire league page by default
 
 {path:'league',component:LeagueTableComponent},
 
@@ -28,7 +30,7 @@ const routes: Routes = [
 
 {path:'player/:playerId',component:PlayerComponent},
 
-{path:'**',component:PageNotFoundComponent}
+{path:'**',component:PageNotFoundComponent} //For invalid urls
 
 ];
 

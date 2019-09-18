@@ -17,10 +17,12 @@ export class FixturesComponent implements OnInit {
 
     ngOnInit() {
 
+      ////fetch the league id from the url
       this.route.paramMap.subscribe((params:ParamMap)=>{
 
       let leagueId=parseInt(params.get('leagueId'))
 
+      //get fixtures about the league
       this._leagueTableService.getFixtures(leagueId)
       .subscribe(data=>this.fixtures=data["matches"]);
 

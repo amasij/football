@@ -13,43 +13,52 @@ export class LeagueTableComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,private router:Router) { }
 
-  public leagueId=2021;//Premier league by default
+  public leagueId=2021;//Premier league by default (2021-> Premier league id)
   public bannerName;
   public showingTable=false;
   public showingFixture=false;
   public showingScorer=false;
 
   ngOnInit() {
+    //get the league id passed in the url via subscription
     this.route.paramMap.subscribe((params:ParamMap)=>{
+
       this.leagueId=parseInt(params.get('leagueId'))
+
       this.bannerName=this.leagueId;
+
+      //show the table component by default
       this.showTable(this.leagueId)
     })
   }
 
 
   showFixtures(leagueId){
-    this.deactivateLink(this.showingFixture)
+    this.deactivateLinks()
     this.showingFixture=true
+    //navigate to fixture component
     this.router.navigate([`fixtures/${leagueId}`],{relativeTo:this.route});
   }
 
 
   showTable(leagueId){
-    this.deactivateLink(this.showingTable)
+    this.deactivateLinks()
     this.showingTable=true
+    //navigate to tables component
     this.router.navigate([`table/${leagueId}`],{relativeTo:this.route});
   }
 
 
   showScorers(leagueId){
-    this.deactivateLink(this.showingScorer)
+    this.deactivateLinks()
     this.showingScorer=true
+    //navigate to scorers component
     this.router.navigate([`scorers/${leagueId}`],{relativeTo:this.route});
   }
 
 
-  deactivateLink(activeLink)
+  //this method removes highligths from the tab links( table, fixture and top scorer)
+  deactivateLinks()
   {
     this.showingTable=false;
     this.showingFixture=false;
