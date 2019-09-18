@@ -1,27 +1,44 @@
 # Soccer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+This my byteworks interview assessment project for the Front-End Developer role
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Soccer is a web application built in angular that consumes web APIs to provide information about soccer competitions, players and teams.
+- The project took me days to start and complete, because i saw the Task email very late
 
-## Code scaffolding
+- The most difficulty i faced was getting the player's thumbnail, because the api given does not provide any, so i had to use the wikipedia api to query the player's page and grab their thubmnail from there
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- The functionality i'm most proud of is the pagination i implemented in the squad list page, because i didn't utilize any libraries just raw code! and i'm also proud of the theming of the entire project 
 
-## Build
+## Liberies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Bootstrap was used for as my css framework, because it is responsive right out of the box and has alot of built in style classes
 
-## Running unit tests
+- jQuery was used to suppport the bootstrap framework, as it is required
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Issues
 
-## Running end-to-end tests
+- My commit history was lost due to an error on my end while uploading the project
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Some Screenshots
+- The rest of the screenshots can be found in the screenshots folder int the root directory
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_16_35%20PM.png)
+
+
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_19_13%20PM.png)
+
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_19_42%20PM.png)
+
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_21_14%20PM.png)
+
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_22_31%20PM.png)
+
+![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%209_09_09%20PM.png)
+
+
+
+
+
