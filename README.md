@@ -22,7 +22,7 @@ Soccer is a web application built in angular that consumes web APIs to provide i
 - My commit history was lost due to an error on my end while uploading the project
 
 ## Some Screenshots
-- The rest of the screenshots can be found in the screenshots folder int the root directory
+- The rest of the screenshots can be found in the screenshots folder in the root directory
 
 
 ![alt text](https://raw.githubusercontent.com/amasij/football/master/screenshots/Screenshot%20-%209_17_2019%20%2C%208_16_35%20PM.png)
